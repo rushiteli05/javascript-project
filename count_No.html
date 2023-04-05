@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count_No</title>
+</head>
+<style>
+    body {
+        background-image: url(https://i.stack.imgur.com/p9mUO.jpg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid white;
+        height: 500px;
+        width: 500px;
+        margin-left: 33%;
+        margin-top: 70px;
+    }
+
+
+    h1 {
+        color: antiquewhite;
+        text-shadow: 2px 2px red;
+        font-size: 60px;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        ;
+
+    }
+
+    #Count {
+        font-size: 55px;
+        color: rgb(235, 160, 95);
+        text-shadow: 2px 2px rgb(15, 5, 5);
+        padding-left: 43%;
+
+    }
+
+    #btn1 {
+        font-size: 30px;
+        margin-top: 50px;
+        padding: 20px;
+        margin-left: 30px;
+        background-color: blueviolet;
+        border: 2px solid white;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+    #btn1:hover {
+        background-color: rgb(203, 136, 244);
+        transition: 2s;
+    }
+
+    #btn2 {
+        font-size: 30px;
+        padding: 20px;
+        background-color: blueviolet;
+        border: 2px solid white;
+        font-weight: bold;
+        border-radius: 20px;
+    }
+
+
+    #btn2:hover {
+        background-color: rgb(203, 136, 244);
+        transition: 2s;
+    }
+</style>
+
+<body>
+    <div id='rushi'>
+        <h1>Counter Project</h1>
+        <br>
+        <p1 id="Count">Display</p1>
+
+        <br><br>
+
+        <button onclick="save.add()" id="btn1">Add Cound</button>
+        <button onclick="save.sub()" id="btn2">Sub Cound</button>
+    </div>
+
+    <script>
+
+        getvalue = document.getElementById("Count")
+
+
+        const fun = () => {
+
+            let Count = 0;
+
+            function add() {
+
+                var color = Count++;
+                if (color > 0) {
+                    getvalue.style.color = "lightgreen"
+                } else if (color < 0) {
+                    getvalue.style.color = "red"
+                } else {
+                    getvalue.style.color = "black"
+                }
+
+                return getvalue.innerText = color
+            }
+
+
+
+            function sub() {
+
+                var color = Count--;
+
+
+                if (color > 0) {
+                    getvalue.style.color = "lightgreen"
+                } else if (color < 0) {
+                    getvalue.style.color = "red"
+                } else {
+                    getvalue.style.color = "black"
+                }
+
+                return getvalue.innerText = color
+            }
+
+
+            return {
+                add: add,
+                sub: sub
+            }
+        }
+
+
+        save = fun()
+
+
+        //Main function written krnychi garj nahi direct call kru shkto onclick mdhe ..
+    </script>
+
+    
+
+
+
+
+</body>
+
+</html>

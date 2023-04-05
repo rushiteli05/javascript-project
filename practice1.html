@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <script>
+
+        let input = "my name is rushikesh"
+
+        let rushi = input.split(' ');
+
+        console.log(rushi);
+
+        for(i=0 ; i < rushi.length ; i++){
+        
+            rushi[i] = rushi[i].charAt(0).toUpperCase() + rushi[i].slice(1);
+        }
+
+        const dada= rushi.join(" ");
+
+        console.log(dada)
+
+
+
+    </script>
+</body>
+
+</html>
